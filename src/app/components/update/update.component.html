@@ -1,0 +1,20 @@
+<p>update works!</p>
+<div class="container">
+          <h1>Update User</h1>
+          <button href="#" routerLink="/users" class="btn btn-primary">Back</button>
+
+          <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="form-group">
+                              <label for="name">Name</label>
+                              <input matInput type="text" formControlName="name" [(ngModel)]="users.name" class="form-control"
+                              placeholder={{users.name}}>
+                    </div>
+                    <div class="form-group">
+                              <label for="email">Email</label>
+                              <input matInput type="text" formControlName="email" [(ngModel)]="users.email" class="form-control"
+                              placeholder={{users.email}}>
+                    </div>
+
+                    <button type="submit">Update</button>
+          </form>
+</div>

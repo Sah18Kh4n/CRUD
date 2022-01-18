@@ -1,0 +1,33 @@
+<mat-card class="container">
+          <h2 style="color: rgb(29, 90, 90);">{{title}}</h2>
+          <button mat-stroked-button class="btn-create" href="#" [routerLink]="['/create']">Create</button>
+          <table class="tbl-table">
+                    <thead class="">
+                              <tr>
+                                        <th>
+                                                  <h3>Id</h3>
+                                        </th>
+                                        <th>
+                                                  <h3>Name</h3>
+                                        </th>
+                                        <th>
+                                                  <h3>Email</h3>
+                                        </th>
+                                        <th>
+                                                  <h3>Controls</h3>
+                                        </th>
+                              </tr>
+                    </thead>
+                    <tr class="tbl-data" *ngFor="let user of users">
+                              <td>{{user.id}}</td>
+                              <td>{{user.name}}</td>
+                              <td>{{user.email}}</td>
+                              <button mat-stroked-button class="btn btn-selection"
+                                        [routerLink]="['/users', user.id]">View</button>
+                              <button mat-stroked-button class="btn btn-selection"
+                                        [routerLink]="['/user/edit', user.id]">Edit</button>
+                              <button mat-stroked-button class="btn btn-selection" type="button"
+                                        (click)="delete(user.id)">Delete</button>
+                    </tr>
+          </table>
+</mat-card>
