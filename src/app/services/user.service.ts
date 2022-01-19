@@ -39,7 +39,7 @@ export class UserService {
   // }
 
   update(user:Users): Observable<void>{
-    return this.httpClient.put<void>(this.url + '/user/' + user.id, user)
+    return this.httpClient.put<void>(this.url + '/users/' + user.id, user)
   }
   // find(id:number):Observable<Users>{
   //   return this.httpClient.get<Users>(this.url + '/users/' + id)
