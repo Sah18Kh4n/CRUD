@@ -34,10 +34,13 @@ export class UserService {
     return this.httpClient.delete<Users>(this.url + '/users/' + id)
   }
 
-  update(id:number, users:Users): Observable<Users>{
-    return this.httpClient.put<Users>(this.url + '/users/' + id, users, this.contentType)
-  }
+  // update(id:number, users:Users): Observable<Users>{
+  //   return this.httpClient.put<Users>(this.url + '/users/' + id, users, this.contentType)
+  // }
 
+  update(user:Users): Observable<void>{
+    return this.httpClient.put<void>(this.url + '/user/' + user.id, user)
+  }
   // find(id:number):Observable<Users>{
   //   return this.httpClient.get<Users>(this.url + '/users/' + id)
   // }
