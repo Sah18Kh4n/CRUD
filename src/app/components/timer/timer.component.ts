@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component,OnDestroy,OnInit } from '@angular/core';
+import {Router } from '@angular/router';
 import { interval, timer } from 'rxjs';
 
 @Component({
@@ -7,7 +7,7 @@ import { interval, timer } from 'rxjs';
   templateUrl: './timer.component.html',
   styleUrls: ['./timer.component.scss']
 })
-export class TimerComponent implements OnInit {
+export class TimerComponent implements OnInit{
 
   data: number = 0;
   constructor(public route: Router) { }
@@ -26,19 +26,27 @@ export class TimerComponent implements OnInit {
       if(this.data == 4){
         this.route.navigateByUrl("/create")
       }
-      if(this.data == 5){
-        clearInterval(this.data);
-      }
+      // else(this.data == 5);{
+      //   setTimeout(()=> {
+      //   });
+      // }
+      if (this.data == 5) {
+        clearInterval(d); // If exceeded 100, clear interval
+    }
       // setTimeout(() => {
       //   this.data == 5
       // },1000); 
     });
-
     //  const ons$ = timer(2000,1000)
     //  ons$.subscribe((c) => {
     //    console.log(c);
     //    this.data = c
     //  })
   }
-
+  // ngOnDestroy(): void {
+  //   if(this.data == 5){
+  //     clearInterval(this.data)
+  //     console.log("detroyed timer");
+  //   }
+  // }
 }
