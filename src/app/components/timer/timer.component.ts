@@ -17,7 +17,7 @@ export class TimerComponent implements OnInit{
     const obs$ = interval(1000);
     this.subscription = obs$.subscribe((d) => {
       console.log(d);
-      // this.data = d ;
+      this.data = d ;
       
       if (d == 2) {
         this.route.navigateByUrl("/users")
@@ -28,19 +28,22 @@ export class TimerComponent implements OnInit{
       if(d == 4){
         this.route.navigateByUrl("/create")
       }
-      if(d >= 5){
+      else if(d >= 5)
       this.subscription.unsubscribe()
-    }
-      // else(this.data == 5);{
-      //   setTimeout(()=> {
-      //   });
+
+      // if(d >= 5){
+      //   this.subscription.unsubscribe()
+
+      //   if (d == 2) {
+      //     this.route.navigateByUrl("/users")
+      //   }
+      //   if(d == 3){
+      //     this.route.navigateByUrl("/timer")
+      //   }
+      //   if(d == 4){
+      //     this.route.navigateByUrl("/create")
+      //   }
       // }
-    //   if (this.data == 5) {
-    //     clearInterval(d); // If exceeded 100, clear interval
-    // }
-      // setTimeout(() => {
-      //   this.data == 5
-      // },1000); 
     });
     //  const ons$ = timer(2000,1000)
     //  ons$.subscribe((c) => {
