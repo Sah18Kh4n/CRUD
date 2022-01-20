@@ -1,6 +1,6 @@
 import { Component,OnDestroy,OnInit } from '@angular/core';
 import {Router } from '@angular/router';
-import { interval, timer } from 'rxjs';
+import { interval, Subscription, timer } from 'rxjs';
 
 @Component({
   selector: 'app-timer',
@@ -10,29 +10,34 @@ import { interval, timer } from 'rxjs';
 export class TimerComponent implements OnInit{
 
   data: number = 0;
+  subscription!: Subscription
   constructor(public route: Router) { }
 
   ngOnInit(): void {
-    const obs$ = interval(5000);
-    obs$.subscribe((d) => {
+    const obs$ = interval(1000);
+    this.subscription = obs$.subscribe((d) => {
       console.log(d);
-      this.data = d + 1;
-      if (this.data == 2) {
+      // this.data = d ;
+      
+      if (d == 2) {
         this.route.navigateByUrl("/users")
       }
-      if(this.data == 3){
+      if(d == 3){
         this.route.navigateByUrl("/timer")
       }
-      if(this.data == 4){
+      if(d == 4){
         this.route.navigateByUrl("/create")
       }
+      if(d >= 5){
+      this.subscription.unsubscribe()
+    }
       // else(this.data == 5);{
       //   setTimeout(()=> {
       //   });
       // }
-      if (this.data == 5) {
-        clearInterval(d); // If exceeded 100, clear interval
-    }
+    //   if (this.data == 5) {
+    //     clearInterval(d); // If exceeded 100, clear interval
+    // }
       // setTimeout(() => {
       //   this.data == 5
       // },1000); 
