@@ -66,9 +66,9 @@
       "id": 20
     },
     {
-      "name": "sdssssada",
-      "email": "sdssssada@test.com",
-      "id": 21
+      "id": 21,
+      "name": "sada",
+      "email": "sdssssada@test.com"
     },
     {
       "name": "sambhavna",
@@ -79,11 +79,6 @@
       "name": "manbhavan",
       "email": "manbhavan@test.com",
       "id": 23
-    },
-    {
-      "name": "sameer",
-      "email": "sameer@test.com",
-      "id": 25
     },
     {
       "name": "Samad",

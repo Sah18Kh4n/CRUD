@@ -15,7 +15,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
-import { UpdateComponent } from './components/update/update.component'
+import { UpdateComponent } from './components/update/update.component';
+import { TimerComponent } from './components/timer/timer.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { UpdateComponent } from './components/update/update.component'
     EditComponent,
     UsersListComponent,
     UpdateComponent,
+    TimerComponent,
   ],
   imports: [
     BrowserModule,
