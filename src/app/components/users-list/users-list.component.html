@@ -28,6 +28,9 @@
                                         [routerLink]="['/user', user.id]">Edit</button>
                               <button mat-stroked-button class="btn btn-selection" type="button"
                                         (click)="delete(user.id)">Delete</button>
+                                        <button mat-stroked-button class="btn btn-selection"
+                                        [routerLink]="['/createUser', user.id]">create user by id</button>
                     </tr>
+                    
           </table>
 </mat-card>

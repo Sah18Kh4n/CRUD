@@ -1,0 +1,34 @@
+<p>{{title}}</p>
+
+<form  [formGroup]="form" (ngSubmit) = "submitUser(form.value)">
+          <mat-card class="form-group">
+                    <h3 class="title">{{title}}</h3>
+                    <mat-form-field>
+                    <mat-label style="font-family: cursive;">Name</mat-label>
+                    <input style="font-family: cursive;" matInput
+                    type="text"
+                    formControlName="name"
+                    id="name"
+                    placeholder="Enter Name"
+                    >
+                    </mat-form-field>
+          
+                    <mat-form-field>
+                    <mat-label style="font-family: cursive;" >Email</mat-label>
+                    <input style="font-family: cursive;" matInput 
+                    type="text"
+                    formControlName="email"
+                    id="email"
+                    placeholder="Enter Email"
+                    >
+                    </mat-form-field>
+                    <div class="btn-controls">
+                              <button mat-raised-button style="margin-right: 10px; background-color: transparent"  href="#" routerLink="/users">Back</button>
+                              <button mat-raised-button style="margin-right: 10px; background-color: transparent"  type="submit">Submit</button>
+                              </div>
+          </mat-card>
+          
+          
+          </form>
+                    
+

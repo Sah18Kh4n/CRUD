@@ -30,6 +30,10 @@ export class UserService {
     return this.httpClient.post<Users>(this.url + '/users', users)
   }
 
+  createUserById(id:number, user:Users):Observable<Users>{
+    return this.httpClient.post<Users>(this.url + '/users', + id, this.contentType)
+  }
+
   deleteUser(id:number):Observable<Users>{
     return this.httpClient.delete<Users>(this.url + '/users/' + id)
   }

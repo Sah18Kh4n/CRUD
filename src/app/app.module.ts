@@ -16,7 +16,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { UpdateComponent } from './components/update/update.component';
-import { TimerComponent } from './components/timer/timer.component'
+import { TimerComponent } from './components/timer/timer.component';
+import { CreatebyidComponent } from './components/createbyid/createbyid.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { TimerComponent } from './components/timer/timer.component'
     UsersListComponent,
     UpdateComponent,
     TimerComponent,
+    CreatebyidComponent,
   ],
   imports: [
     BrowserModule,
