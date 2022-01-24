@@ -1,6 +1,7 @@
 <nav class="container">
   <h1>{{title}}</h1>
   <button mat-raised-button href="#" routerLink="users" class="btn-user">Users</button>
+  <button mat-stroked-button class="btn btn-selection" href="#" [routerLink]="['/createUser']">create user by id</button>
 </nav>
 
 <router-outlet></router-outlet>

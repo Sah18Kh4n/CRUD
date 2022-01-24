@@ -33,6 +33,9 @@ export class CreatebyidComponent implements OnInit {
         alert("User Create by Id Successfully");
         this.router.navigateByUrl('/users')
       })
+    if(user.id != null){
+      alert("user Already exist please select different Id")
+    }
     }
   }
 }

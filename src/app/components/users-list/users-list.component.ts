@@ -27,6 +27,4 @@ export class UsersListComponent implements OnInit {
       alert("User Delete Successfull!")
     });
   }
-
-  
 }
